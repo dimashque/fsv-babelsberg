@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – FSV Babelsberg 74</title>
+  <meta name="description" content="Kontakt, Adresse und Ansprechpartner des FSV Babelsberg 74." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { club: { green: '#0B5C3B', 'green-dark': '#083D28', 'green-light': '#1A7A52', cream: '#F7F5F0', ink: '#0F1410', muted: '#5A635C' } },
+          fontFamily: { display: ['"Bebas Neue"', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-club-cream text-club-ink font-sans antialiased">
+  <header id="site-header" class="sticky top-0 z-50 bg-club-green text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-3"><div class="w-12 h-12 rounded-full bg-white flex items-center justify-center"><span class="font-display text-club-green text-xl">74</span></div><div class="hidden sm:block font-display text-2xl">FSV BABELSBERG</div></a>
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+        <a href="index.html" class="px-3 py-2 rounded hover:bg-white/10">Start</a>
+        <a href="kontakt.html" class="px-3 py-2 rounded bg-white/15">Kontakt</a>
+        <a href="mitglied-werden.html" class="ml-2 px-4 py-2 bg-white text-club-green font-semibold rounded-full">Komm ins Team</a>
+      </nav>
+      <button id="menu-btn" class="lg:hidden p-2" aria-label="Menü"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-club-green-dark"><div class="px-4 py-4 space-y-1 text-sm"><a href="index.html" class="block px-3 py-2.5">Start</a><a href="kontakt.html" class="block px-3 py-2.5 bg-white/10 rounded">Kontakt</a></div></div>
+  </header>
+
+  <main>
+    <section class="page-hero text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-green-200 text-sm font-semibold tracking-widest uppercase mb-2">Erreichbarkeit</p>
+        <h1 class="font-display text-5xl md:text-7xl leading-none">KONTAKT</h1>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-display text-3xl text-club-green mb-6">ADRESSE & BÜRO</h2>
+          <p class="text-lg font-medium mb-1">FSV Babelsberg 74 e.V.</p>
+          <p class="text-club-muted mb-6">Rudolf-Breitscheid-Straße 173<br />14482 Potsdam</p>
+          <p class="text-club-muted mb-1">Tel. <a href="tel:+4933187000322" class="text-club-green font-medium hover:underline">0331 87 00 03 22</a></p>
+          <p class="text-club-muted mb-6">Bürozeiten: Dienstag & Donnerstag 10–16 Uhr</p>
+          <h3 class="font-semibold mb-3">E-Mail-Adressen (öffentlich auf der Vereinswebsite)</h3>
+          <ul class="space-y-2 text-sm text-club-muted">
+            <li>Verwaltung: <a href="mailto:verwaltung@fsv-babelsberg74.de" class="text-club-green hover:underline">verwaltung@fsv-babelsberg74.de</a></li>
+            <li>Sportliche Leitung: <a href="mailto:sportl.leiter@fsv-babelsberg74.de" class="text-club-green hover:underline">sportl.leiter@fsv-babelsberg74.de</a></li>
+            <li>Nachwuchs: <a href="mailto:nachwuchs@fsv-babelsberg74.de" class="text-club-green hover:underline">nachwuchs@fsv-babelsberg74.de</a></li>
+            <li>Finanzen: <a href="mailto:finanzen@fsv-babelsberg74.de" class="text-club-green hover:underline">finanzen@fsv-babelsberg74.de</a></li>
+            <li>Sponsoring: <a href="mailto:sponsoring@fsv-babelsberg74.de" class="text-club-green hover:underline">sponsoring@fsv-babelsberg74.de</a></li>
+            <li>Büro / Camps: <a href="mailto:buero@fsv-babelsberg74.de" class="text-club-green hover:underline">buero@fsv-babelsberg74.de</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-black/5 shadow-sm">
+          <h2 class="font-semibold text-xl mb-2">Nachricht (Demo)</h2>
+          <p class="text-sm text-club-muted mb-6">Keine Datenübertragung – bitte die offiziellen E-Mail-Adressen nutzen.</p>
+          <form data-validate class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-1">Name *</label>
+              <input type="text" required class="form-input" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">E-Mail *</label>
+              <input type="email" required class="form-input" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">Nachricht *</label>
+              <textarea required class="form-input" rows="5"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 bg-club-green text-white font-semibold rounded-lg hover:bg-club-green-light transition">Senden (Demo)</button>
+            <p data-form-message class="text-sm"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-white border-t border-black/5">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="font-semibold mb-4">Sportanlage</h2>
+        <p class="text-club-muted text-sm max-w-xl">Heimspiele und Training: Sportanlage Rudolf-Breitscheid-Straße, 14482 Potsdam. Kapazität ca. 1.000 Plätze (Angabe öffentlich).</p>
+        <p class="mt-6 text-xs text-club-muted">Impressum & Datenschutz: Die rechtlich verbindlichen Angaben stehen auf der offiziellen Website des Vereins. Dieses Redesign ist ein unabhängiges Konzept und nicht beauftragt.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-club-ink text-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/50">
+      <p>© FSV Babelsberg 74 e.V. · Redesign-Konzept</p>
+      <a href="index.html" class="hover:text-white">← Zur Startseite</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

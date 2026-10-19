@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News – FSV Babelsberg 74</title>
+  <meta name="description" content="Aktuelle Meldungen des FSV Babelsberg 74." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { club: { green: '#0B5C3B', 'green-dark': '#083D28', 'green-light': '#1A7A52', cream: '#F7F5F0', ink: '#0F1410', muted: '#5A635C' } },
+          fontFamily: { display: ['"Bebas Neue"', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-club-cream text-club-ink font-sans antialiased">
+  <header id="site-header" class="sticky top-0 z-50 bg-club-green text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-3"><div class="w-12 h-12 rounded-full bg-white flex items-center justify-center"><span class="font-display text-club-green text-xl">74</span></div><div class="hidden sm:block font-display text-2xl">FSV BABELSBERG</div></a>
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+        <a href="index.html" class="px-3 py-2 rounded hover:bg-white/10">Start</a>
+        <a href="news.html" class="px-3 py-2 rounded bg-white/15">News</a>
+        <a href="mitglied-werden.html" class="ml-2 px-4 py-2 bg-white text-club-green font-semibold rounded-full">Komm ins Team</a>
+      </nav>
+      <button id="menu-btn" class="lg:hidden p-2" aria-label="Menü"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-club-green-dark"><div class="px-4 py-4 space-y-1 text-sm"><a href="index.html" class="block px-3 py-2.5">Start</a><a href="news.html" class="block px-3 py-2.5 bg-white/10 rounded">News</a></div></div>
+  </header>
+
+  <main>
+    <section class="page-hero text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-green-200 text-sm font-semibold tracking-widest uppercase mb-2">Aktuelles</p>
+        <h1 class="font-display text-5xl md:text-7xl leading-none">NEWS</h1>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-3xl mx-auto px-4 space-y-10">
+        <article class="border-b border-black/10 pb-10">
+          <p class="text-xs text-club-muted uppercase tracking-wider mb-2">Frauen · DFB-Pokal</p>
+          <h2 class="font-semibold text-2xl mb-3">DAS Highlight des Sommers – Qualifikation DFB-Pokal der Frauen</h2>
+          <p class="text-club-muted leading-relaxed">Die Auslosung für die Playoffs des DFB-Pokals der Frauen (Saison 2026/27) ist durch. Details und Berichte auf der offiziellen Vereinswebsite.</p>
+          <a href="https://www.fsv-babelsberg74.de/" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-semibold text-club-green hover:underline">Zum Originalartikel →</a>
+        </article>
+        <article class="border-b border-black/10 pb-10">
+          <p class="text-xs text-club-muted uppercase tracking-wider mb-2">Herren · Trainer</p>
+          <h2 class="font-semibold text-2xl mb-3">Willkommen in der 74-Familie – Maximilian Stöck</h2>
+          <p class="text-club-muted leading-relaxed">Der FSV Babelsberg 74 und Maximilian Stöck haben sich auf eine Zusammenarbeit zur Spielzeit 2026/27 verständigt (öffentliche Vereinsmeldung).</p>
+          <a href="https://www.fsv-babelsberg74.de/" target="_blank" rel="noopener" class="inline-block mt-4 text-sm font-semibold text-club-green hover:underline">Zum Originalartikel →</a>
+        </article>
+        <article class="border-b border-black/10 pb-10">
+          <p class="text-xs text-club-muted uppercase tracking-wider mb-2">Jugend</p>
+          <h2 class="font-semibold text-2xl mb-3">A-Jugend startet mit Siegen in die Landesklasse West</h2>
+          <p class="text-club-muted leading-relaxed">Mit Einsatz und Teamgeist soll die Entwicklung der A-Jugend weiter vorangetrieben werden. Ergebnisse und Tabellen: fussball.de.</p>
+        </article>
+        <p class="text-sm text-club-muted">Vollständige und aktuelle Meldungen: <a href="https://www.fsv-babelsberg74.de/" class="text-club-green font-medium hover:underline">fsv-babelsberg74.de</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-club-ink text-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/50">
+      <p>© FSV Babelsberg 74 e.V. · Redesign-Konzept</p>
+      <a href="index.html" class="hover:text-white">← Zur Startseite</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

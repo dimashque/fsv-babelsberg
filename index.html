@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSV Babelsberg 74 – Mein Stadt, mein Verein</title>
+  <meta name="description" content="FSV Babelsberg 74 – der familiäre Fußballverein aus Potsdam-Babelsberg. Herren, Frauen, Jugend und Feriencamps. Komm ins Team!" />
+  <meta name="theme-color" content="#0B5C3B" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            club: {
+              green: '#0B5C3B',
+              'green-dark': '#083D28',
+              'green-light': '#1A7A52',
+              forest: '#0A4A30',
+              cream: '#F7F5F0',
+              ink: '#0F1410',
+              muted: '#5A635C',
+            }
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-club-cream text-club-ink font-sans antialiased">
+  <!-- Top bar -->
+  <div class="bg-club-ink text-white text-xs tracking-wide">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      <span class="opacity-80">Rudolf-Breitscheid-Straße 173 · 14482 Potsdam</span>
+      <div class="flex gap-4">
+        <a href="https://www.instagram.com/fsvbabelsberg74_verein/" target="_blank" rel="noopener" class="hover:text-green-300 transition">Instagram</a>
+        <a href="https://www.facebook.com/pg/FSV74" target="_blank" rel="noopener" class="hover:text-green-300 transition">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header id="site-header" class="sticky top-0 z-50 bg-club-green text-white shadow-lg transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center shadow-md overflow-hidden border-2 border-white/30">
+            <span class="font-display text-club-green text-xl md:text-2xl leading-none">74</span>
+          </div>
+          <div class="hidden sm:block">
+            <div class="font-display text-2xl tracking-wide leading-none">FSV BABELSBERG</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] opacity-80">Mein Stadt · Mein Verein</div>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <a href="index.html" class="px-3 py-2 rounded hover:bg-white/10 transition">Start</a>
+          <div class="relative group">
+            <button class="px-3 py-2 rounded hover:bg-white/10 transition flex items-center gap-1">Teams
+              <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="bg-club-ink text-white rounded-lg shadow-xl py-2 min-w-[180px]">
+                <a href="teams.html#herren" class="block px-4 py-2 hover:bg-club-green transition">Herren</a>
+                <a href="teams.html#frauen" class="block px-4 py-2 hover:bg-club-green transition">Frauen</a>
+                <a href="teams.html#jugend" class="block px-4 py-2 hover:bg-club-green transition">Jugend</a>
+              </div>
+            </div>
+          </div>
+          <a href="news.html" class="px-3 py-2 rounded hover:bg-white/10 transition">News</a>
+          <a href="verein.html" class="px-3 py-2 rounded hover:bg-white/10 transition">Verein</a>
+          <a href="camps.html" class="px-3 py-2 rounded hover:bg-white/10 transition">Feriencamps</a>
+          <a href="sponsoren.html" class="px-3 py-2 rounded hover:bg-white/10 transition">Partner</a>
+          <a href="kontakt.html" class="px-3 py-2 rounded hover:bg-white/10 transition">Kontakt</a>
+          <a href="mitglied-werden.html" class="ml-2 px-4 py-2 bg-white text-club-green font-semibold rounded-full hover:bg-club-cream transition shadow">Komm ins Team</a>
+        </nav>
+
+        <button id="menu-btn" class="lg:hidden p-2 rounded hover:bg-white/10" aria-label="Menü öffnen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-club-green-dark">
+      <div class="px-4 py-4 space-y-1 text-sm font-medium">
+        <a href="index.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Start</a>
+        <a href="teams.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Teams</a>
+        <a href="news.html" class="block px-3 py-2.5 rounded hover:bg-white/10">News</a>
+        <a href="verein.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Verein</a>
+        <a href="camps.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Feriencamps</a>
+        <a href="sponsoren.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Partner</a>
+        <a href="kontakt.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Kontakt</a>
+        <a href="mitglied-werden.html" class="block mt-2 px-4 py-3 bg-white text-club-green font-semibold rounded-lg text-center">Komm ins Team</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative min-h-[88vh] flex items-end overflow-hidden bg-club-ink">
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80"
+          alt="Fußballplatz"
+          class="w-full h-full object-cover opacity-50"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-club-ink via-club-ink/70 to-club-green/40"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 pb-16 md:pb-24 w-full">
+        <p class="text-green-300 font-medium tracking-widest uppercase text-sm mb-4">Potsdam-Babelsberg · Seit 1990</p>
+        <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-[0.9] max-w-4xl">
+          MEIN STADT.<br />MEIN VEREIN.
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-white/85 max-w-xl leading-relaxed">
+          Über 500 Mitglieder. 25+ Mannschaften. Vom Minikicker bis Ü60 – hier rollt der Ball für alle Generationen.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="mitglied-werden.html" class="inline-flex items-center gap-2 px-7 py-3.5 bg-club-green text-white font-semibold rounded-full hover:bg-club-green-light transition shadow-lg shadow-club-green/30">
+            Mitglied werden
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="teams.html" class="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-white/40 text-white font-semibold rounded-full hover:bg-white/10 transition">
+            Unsere Teams
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT MATCH (sample / labeled) -->
+    <section class="bg-club-green text-white">
+      <div class="max-w-7xl mx-auto px-4 py-8 md:py-10">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <p class="text-green-200 text-xs font-semibold tracking-widest uppercase mb-1">Nächstes Heimspiel · Beispiel</p>
+            <h2 class="font-display text-3xl md:text-4xl tracking-wide">FSV 74 vs. Gegner</h2>
+            <p class="text-white/80 mt-1 text-sm">Datum & Anstoßzeit folgen · Sportanlage Rudolf-Breitscheid-Straße</p>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="text-center">
+              <div class="font-display text-4xl">74</div>
+              <div class="text-xs opacity-70">Heim</div>
+            </div>
+            <div class="text-2xl font-light opacity-50">:</div>
+            <div class="text-center">
+              <div class="font-display text-4xl opacity-60">–</div>
+              <div class="text-xs opacity-70">Gast</div>
+            </div>
+            <a href="news.html" class="ml-4 px-5 py-2.5 bg-white text-club-green font-semibold rounded-full text-sm hover:bg-club-cream transition">Spielplan</a>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-green-200/80">Hinweis: Aktuelle Spieltermine und Ergebnisse finden Sie auf fussball.de und den Vereins-Kanälen. Hier beispielhaft dargestellt.</p>
+      </div>
+    </section>
+
+    <!-- CLUB INTRO -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5">
+            <p class="text-club-green font-semibold tracking-widest uppercase text-sm mb-3">Der Verein</p>
+            <h2 class="font-display text-5xl md:text-6xl text-club-ink leading-none mb-6">FUSSBALL FÜR ALLE GENERATIONEN</h2>
+            <p class="text-club-muted text-lg leading-relaxed mb-6">
+              Der FSV Babelsberg 74 ist der familiäre Fußballverein im Potsdamer Stadtteil Babelsberg. Gegründet 1990 aus der Tradition der HSG Wissenschaft Babelsberg (Sektion Fußball seit 1974), bieten wir heute Hunderten Mitgliedern eine sportliche Heimat – von den Minikickern bis zu den Senioren.
+            </p>
+            <p class="text-club-muted leading-relaxed mb-8">
+              Besonders stolz sind wir auf unsere Frauenmannschaften und die breite Nachwuchsarbeit. Respekt auf und neben dem Platz ist für uns selbstverständlich.
+            </p>
+            <a href="verein.html" class="inline-flex items-center gap-2 text-club-green font-semibold hover:gap-3 transition-all">
+              Mehr über den Verein
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+            <div class="bg-club-green text-white p-8 rounded-2xl flex flex-col justify-end min-h-[200px]">
+              <div class="font-display text-5xl md:text-6xl">500+</div>
+              <div class="text-green-100 mt-1">Mitglieder</div>
+            </div>
+            <div class="bg-club-ink text-white p-8 rounded-2xl flex flex-col justify-end min-h-[200px] mt-8">
+              <div class="font-display text-5xl md:text-6xl">25+</div>
+              <div class="text-white/70 mt-1">Mannschaften</div>
+            </div>
+            <div class="bg-white border border-black/5 p-8 rounded-2xl flex flex-col justify-end min-h-[200px] -mt-8 shadow-sm">
+              <div class="font-display text-5xl md:text-6xl text-club-green">1990</div>
+              <div class="text-club-muted mt-1">Vereinsgründung</div>
+            </div>
+            <div class="bg-club-cream border border-club-green/20 p-8 rounded-2xl flex flex-col justify-end min-h-[200px]">
+              <div class="font-display text-5xl md:text-6xl text-club-green">♀♂</div>
+              <div class="text-club-muted mt-1">Herren · Frauen · Jugend</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAMS -->
+    <section class="py-20 bg-club-ink text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <p class="text-green-400 font-semibold tracking-widest uppercase text-sm mb-2">Mannschaften</p>
+            <h2 class="font-display text-5xl md:text-6xl leading-none">UNSERE TEAMS</h2>
+          </div>
+          <a href="teams.html" class="text-green-300 font-medium hover:text-white transition">Alle Teams ansehen →</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="teams.html#herren" class="group relative overflow-hidden rounded-2xl aspect-[4/5] block">
+            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=800&q=80" alt="Herren" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-club-ink via-club-ink/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="font-display text-3xl">HERREN</h3>
+              <p class="text-white/70 text-sm mt-1">1. & 2. Männer · Ü-Teams</p>
+            </div>
+          </a>
+          <a href="teams.html#frauen" class="group relative overflow-hidden rounded-2xl aspect-[4/5] block">
+            <img src="https://images.unsplash.com/photo-1529900748602-604efb9c6b8f?auto=format&fit=crop&w=800&q=80" alt="Frauen" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-club-ink via-club-ink/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="font-display text-3xl">FRAUEN</h3>
+              <p class="text-white/70 text-sm mt-1">1. & 2. Frauen · Juniorinnen</p>
+            </div>
+          </a>
+          <a href="teams.html#jugend" class="group relative overflow-hidden rounded-2xl aspect-[4/5] block">
+            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=800&q=80" alt="Jugend" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-club-ink via-club-ink/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="font-display text-3xl">JUGEND</h3>
+              <p class="text-white/70 text-sm mt-1">A bis G · Minikicker</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <p class="text-club-green font-semibold tracking-widest uppercase text-sm mb-2">Aktuelles</p>
+            <h2 class="font-display text-5xl md:text-6xl leading-none">NEWS</h2>
+          </div>
+          <a href="news.html" class="text-club-green font-medium hover:underline">Alle Meldungen →</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="group">
+            <div class="aspect-[16/10] rounded-xl overflow-hidden bg-club-green/10 mb-4">
+              <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            </div>
+            <p class="text-xs text-club-muted uppercase tracking-wider mb-2">Frauen · DFB-Pokal</p>
+            <h3 class="font-semibold text-xl leading-snug group-hover:text-club-green transition">DAS Highlight des Sommers – Qualifikation DFB-Pokal der Frauen</h3>
+            <p class="mt-2 text-club-muted text-sm line-clamp-2">Die Auslosung für die Playoffs des DFB-Pokals der Frauen (Saison 2026/27) ist durch.</p>
+          </article>
+          <article class="group">
+            <div class="aspect-[16/10] rounded-xl overflow-hidden bg-club-green/10 mb-4">
+              <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            </div>
+            <p class="text-xs text-club-muted uppercase tracking-wider mb-2">Herren · Trainer</p>
+            <h3 class="font-semibold text-xl leading-snug group-hover:text-club-green transition">Bääähmmmm und herzlich willkommen in der 74-Familie</h3>
+            <p class="mt-2 text-club-muted text-sm line-clamp-2">Der FSV Babelsberg 74 und Maximilian Stöck haben sich auf eine Zusammenarbeit zur Spielzeit 2026/27 verständigt.</p>
+          </article>
+          <article class="group">
+            <div class="aspect-[16/10] rounded-xl overflow-hidden bg-club-green/10 mb-4">
+              <img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            </div>
+            <p class="text-xs text-club-muted uppercase tracking-wider mb-2">Jugend</p>
+            <h3 class="font-semibold text-xl leading-snug group-hover:text-club-green transition">A-Jugend startet mit zwei Siegen in die Landesklasse West</h3>
+            <p class="mt-2 text-club-muted text-sm line-clamp-2">Mit Einsatz, Teamgeist und viel Freude am Fußball soll die erfolgreiche Entwicklung weiter vorangetrieben werden.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN CTA -->
+    <section class="relative py-24 overflow-hidden">
+      <div class="absolute inset-0 bg-club-green">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+      </div>
+      <div class="relative max-w-4xl mx-auto px-4 text-center text-white">
+        <h2 class="font-display text-5xl md:text-7xl leading-none mb-6">KOMM INS TEAM</h2>
+        <p class="text-lg md:text-xl text-green-100 max-w-2xl mx-auto mb-10">
+          Ob Spieler:in, Trainer:in, Schiedsrichter:in oder förderndes Mitglied – bei uns findest du deine Rolle. Wir freuen uns auf dich und deine Familie.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="mitglied-werden.html" class="px-8 py-4 bg-white text-club-green font-bold rounded-full hover:bg-club-cream transition shadow-lg">Mitgliedsantrag</a>
+          <a href="kontakt.html" class="px-8 py-4 border-2 border-white/50 font-semibold rounded-full hover:bg-white/10 transition">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPS -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <p class="text-club-green font-semibold tracking-widest uppercase text-sm mb-3">Ferien</p>
+            <h2 class="font-display text-5xl md:text-6xl leading-none mb-6">74ER FERIENCAMP</h2>
+            <p class="text-club-muted text-lg leading-relaxed mb-6">
+              Vier- bis fünftägige Fußballcamps für Mädchen und Jungen von 7 bis 13 Jahren. Training auf Kunstrasen, Verpflegung, Trikot und Ausflug inklusive – ohne Übernachtung.
+            </p>
+            <ul class="space-y-3 text-club-ink mb-8">
+              <li class="flex items-start gap-3"><span class="text-club-green mt-1">✓</span> Tägliche Trainingseinheiten mit erfahrenen Trainer:innen</li>
+              <li class="flex items-start gap-3"><span class="text-club-green mt-1">✓</span> 74er-Trikot und Teilnehmerurkunde</li>
+              <li class="flex items-start gap-3"><span class="text-club-green mt-1">✓</span> Ausflug (Kino, Bad o.ä.)</li>
+            </ul>
+            <a href="camps.html" class="inline-flex items-center gap-2 px-6 py-3 bg-club-green text-white font-semibold rounded-full hover:bg-club-green-light transition">Jetzt anmelden</a>
+          </div>
+          <div class="order-1 lg:order-2 relative">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=900&q=80" alt="Fußballcamp" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-club-ink text-white px-6 py-4 rounded-xl shadow-xl hidden sm:block">
+              <div class="font-display text-2xl">7–13 JAHRE</div>
+              <div class="text-sm text-white/70">9:00 – 16:00 Uhr</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section class="py-16 bg-white border-y border-black/5">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-center text-club-muted text-sm font-medium tracking-widest uppercase mb-8">Danke an unsere Partner – Ohne euch kein Amateurfußball</p>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+          <div class="h-10 w-28 bg-club-ink/10 rounded flex items-center justify-center text-xs font-semibold text-club-muted">Partner</div>
+          <div class="h-10 w-28 bg-club-ink/10 rounded flex items-center justify-center text-xs font-semibold text-club-muted">Partner</div>
+          <div class="h-10 w-28 bg-club-ink/10 rounded flex items-center justify-center text-xs font-semibold text-club-muted">Partner</div>
+          <div class="h-10 w-28 bg-club-ink/10 rounded flex items-center justify-center text-xs font-semibold text-club-muted">Partner</div>
+          <div class="h-10 w-28 bg-club-ink/10 rounded flex items-center justify-center text-xs font-semibold text-club-muted">Partner</div>
+        </div>
+        <p class="text-center mt-8">
+          <a href="sponsoren.html" class="text-club-green font-semibold hover:underline">Partner werden →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY strip -->
+    <section class="py-0">
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        <div class="aspect-square overflow-hidden"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover hover:scale-105 transition duration-500" /></div>
+        <div class="aspect-square overflow-hidden"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover hover:scale-105 transition duration-500" /></div>
+        <div class="aspect-square overflow-hidden"><img src="https://images.unsplash.com/photo-1529900748602-604efb9c6b8f?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover hover:scale-105 transition duration-500" /></div>
+        <div class="aspect-square overflow-hidden"><img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=600&q=80" alt="" class="w-full h-full object-cover hover:scale-105 transition duration-500" /></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-club-ink text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="font-display text-2xl mb-3">FSV BABELSBERG 74</div>
+          <p class="text-white/60 text-sm leading-relaxed">Fussballsportverein Babelsberg 74 e.V.<br />Rudolf-Breitscheid-Straße 173<br />14482 Potsdam</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-sm tracking-wider uppercase text-green-400">Navigation</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="teams.html" class="hover:text-white transition">Teams</a></li>
+            <li><a href="news.html" class="hover:text-white transition">News</a></li>
+            <li><a href="verein.html" class="hover:text-white transition">Verein</a></li>
+            <li><a href="camps.html" class="hover:text-white transition">Feriencamps</a></li>
+            <li><a href="mitglied-werden.html" class="hover:text-white transition">Mitglied werden</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-sm tracking-wider uppercase text-green-400">Kontakt</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>Tel. <a href="tel:+4933187000322" class="hover:text-white">0331 87 00 03 22</a></li>
+            <li><a href="mailto:verwaltung@fsv-babelsberg74.de" class="hover:text-white">verwaltung@fsv-babelsberg74.de</a></li>
+            <li class="pt-2">Büro: Di & Do 10–16 Uhr</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-sm tracking-wider uppercase text-green-400">Folgen</h4>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/fsvbabelsberg74_verein/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-club-green transition" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/pg/FSV74" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-club-green transition" aria-label="Facebook">FB</a>
+          </div>
+          <p class="mt-6 text-xs text-white/40">Downloads & Formulare auf der Kontaktseite und unter Downloads.</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/40">
+        <p>© FSV Babelsberg 74 e.V. · Redesign-Konzept (unabhängig, nicht beauftragt)</p>
+        <div class="flex gap-4">
+          <a href="kontakt.html" class="hover:text-white/70">Impressum / Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

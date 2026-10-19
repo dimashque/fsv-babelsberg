@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teams – FSV Babelsberg 74</title>
+  <meta name="description" content="Herren-, Frauen- und Jugendmannschaften des FSV Babelsberg 74." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            club: { green: '#0B5C3B', 'green-dark': '#083D28', 'green-light': '#1A7A52', forest: '#0A4A30', cream: '#F7F5F0', ink: '#0F1410', muted: '#5A635C' }
+          },
+          fontFamily: { display: ['"Bebas Neue"', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-club-cream text-club-ink font-sans antialiased">
+  <div class="bg-club-ink text-white text-xs tracking-wide">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      <span class="opacity-80">Rudolf-Breitscheid-Straße 173 · 14482 Potsdam</span>
+      <div class="flex gap-4">
+        <a href="https://www.instagram.com/fsvbabelsberg74_verein/" target="_blank" rel="noopener" class="hover:text-green-300">Instagram</a>
+        <a href="https://www.facebook.com/pg/FSV74" target="_blank" rel="noopener" class="hover:text-green-300">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-50 bg-club-green text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center"><span class="font-display text-club-green text-xl">74</span></div>
+          <div class="hidden sm:block">
+            <div class="font-display text-2xl tracking-wide leading-none">FSV BABELSBERG</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] opacity-80">Mein Stadt · Mein Verein</div>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <a href="index.html" class="px-3 py-2 rounded hover:bg-white/10">Start</a>
+          <a href="teams.html" class="px-3 py-2 rounded bg-white/15">Teams</a>
+          <a href="news.html" class="px-3 py-2 rounded hover:bg-white/10">News</a>
+          <a href="verein.html" class="px-3 py-2 rounded hover:bg-white/10">Verein</a>
+          <a href="camps.html" class="px-3 py-2 rounded hover:bg-white/10">Feriencamps</a>
+          <a href="sponsoren.html" class="px-3 py-2 rounded hover:bg-white/10">Partner</a>
+          <a href="kontakt.html" class="px-3 py-2 rounded hover:bg-white/10">Kontakt</a>
+          <a href="mitglied-werden.html" class="ml-2 px-4 py-2 bg-white text-club-green font-semibold rounded-full">Komm ins Team</a>
+        </nav>
+        <button id="menu-btn" class="lg:hidden p-2" aria-label="Menü"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-club-green-dark">
+      <div class="px-4 py-4 space-y-1 text-sm font-medium">
+        <a href="index.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Start</a>
+        <a href="teams.html" class="block px-3 py-2.5 rounded bg-white/10">Teams</a>
+        <a href="news.html" class="block px-3 py-2.5 rounded hover:bg-white/10">News</a>
+        <a href="verein.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Verein</a>
+        <a href="camps.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Feriencamps</a>
+        <a href="sponsoren.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Partner</a>
+        <a href="kontakt.html" class="block px-3 py-2.5 rounded hover:bg-white/10">Kontakt</a>
+        <a href="mitglied-werden.html" class="block mt-2 px-4 py-3 bg-white text-club-green font-semibold rounded-lg text-center">Komm ins Team</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero text-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-green-200 text-sm font-semibold tracking-widest uppercase mb-2">Mannschaften</p>
+        <h1 class="font-display text-5xl md:text-7xl leading-none">UNSERE TEAMS</h1>
+        <p class="mt-4 text-white/80 max-w-xl">Herren, Frauen und Jugend – alle unter einem Dach an der Rudolf-Breitscheid-Straße.</p>
+      </div>
+    </section>
+
+    <section id="herren" class="py-16 md:py-20 scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-10 items-start">
+          <div class="md:w-1/3">
+            <h2 class="font-display text-4xl md:text-5xl text-club-green">HERREN</h2>
+            <p class="mt-4 text-club-muted leading-relaxed">Die Herrenmannschaften des FSV Babelsberg 74 spielen in den Brandenburger Ligen. Aktuelle Tabellen und Spielpläne finden Sie auf fussball.de.</p>
+          </div>
+          <div class="md:w-2/3 grid sm:grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-6 border border-black/5 shadow-sm">
+              <h3 class="font-semibold text-lg">1. Herren</h3>
+              <p class="text-sm text-club-muted mt-1">Landesliga / Landesklasse (je nach Saison)</p>
+              <p class="text-xs text-club-muted mt-3">Trainer und Kader: siehe Vereinskanäle und fussball.de</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-black/5 shadow-sm">
+              <h3 class="font-semibold text-lg">2. Herren</h3>
+              <p class="text-sm text-club-muted mt-1">Kreisoberliga / Kreisklasse</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-black/5 shadow-sm">
+              <h3 class="font-semibold text-lg">Ü-Teams</h3>
+              <p class="text-sm text-club-muted mt-1">Ü32 · Ü40 und weitere Seniorenmannschaften</p>
+            </div>
+            <div class="bg-club-green/5 rounded-xl p-6 border border-club-green/20">
+              <h3 class="font-semibold text-lg text-club-green">Interesse?</h3>
+              <p class="text-sm text-club-muted mt-1">Du willst bei den Herren mitspielen?</p>
+              <a href="mitglied-werden.html" class="inline-block mt-3 text-sm font-semibold text-club-green hover:underline">Kontakt aufnehmen →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="frauen" class="py-16 md:py-20 bg-white scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-10 items-start">
+          <div class="md:w-1/3">
+            <h2 class="font-display text-4xl md:text-5xl text-club-green">FRAUEN</h2>
+            <p class="mt-4 text-club-muted leading-relaxed">Die Frauen des FSV 74 gehören zu den erfolgreichsten Amateurteams Brandenburgs – mehrfach Landespokal und Aufstiege in die Regionalliga Nordost. Juniorinnen-Teams ergänzen den Bereich.</p>
+          </div>
+          <div class="md:w-2/3 grid sm:grid-cols-2 gap-4">
+            <div class="bg-club-cream rounded-xl p-6 border border-black/5">
+              <h3 class="font-semibold text-lg">1. Frauen</h3>
+              <p class="text-sm text-club-muted mt-1">Landesliga / Regionalliga (je nach Saison)</p>
+              <p class="text-xs text-club-muted mt-3">Erfolge u. a. Landesmeisterschaften und DFB-Pokal-Teilnahmen (öffentlich dokumentiert).</p>
+            </div>
+            <div class="bg-club-cream rounded-xl p-6 border border-black/5">
+              <h3 class="font-semibold text-lg">2. Frauen</h3>
+              <p class="text-sm text-club-muted mt-1">Unterbau und Entwicklungsteam</p>
+            </div>
+            <div class="bg-club-cream rounded-xl p-6 border border-black/5">
+              <h3 class="font-semibold text-lg">Juniorinnen</h3>
+              <p class="text-sm text-club-muted mt-1">Mädchenfußball – mehrere Altersklassen</p>
+            </div>
+            <div class="bg-club-green text-white rounded-xl p-6">
+              <h3 class="font-semibold text-lg">Mädchen & Frauen willkommen</h3>
+              <p class="text-sm text-green-100 mt-1">Trainingszeiten und Ansprechpartner über die Jugend- und Sportleitung.</p>
+              <a href="kontakt.html" class="inline-block mt-3 text-sm font-semibold text-white underline">Kontakt →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jugend" class="py-16 md:py-20 scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-10 items-start">
+          <div class="md:w-1/3">
+            <h2 class="font-display text-4xl md:text-5xl text-club-green">JUGEND</h2>
+            <p class="mt-4 text-club-muted leading-relaxed">Vom Minikicker bis zur A-Jugend: Die Nachwuchsabteilung ist das Herzstück des Vereins. Viele Teams spielen in den höchsten Landes- und Kreisligen Brandenburgs.</p>
+            <p class="mt-4 text-sm text-club-muted">Jugendleitung: siehe Kontaktseite (nachwuchs@fsv-babelsberg74.de).</p>
+          </div>
+          <div class="md:w-2/3">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="bg-white rounded-lg p-4 text-center border border-black/5 font-semibold">A-Junioren</div>
+              <div class="bg-white rounded-lg p-4 text-center border border-black/5 font-semibold">B-Junioren</div>
+              <div class="bg-white rounded-lg p-4 text-center border border-black/5 font-semibold">C-Junioren</div>
+              <div class="bg-white rounded-lg p-4 text-center border border-black/5 font-semibold">D-Junioren</div>
+              <div class="bg-white rounded-lg p-4 text-center border border-black/5 font-semibold">E-Junioren</div>
+              <div class="bg-white rounded-lg p-4 text-center border border-black/5 font-semibold">F / G / Mini</div>
+            </div>
+            <p class="mt-6 text-sm text-club-muted">Aktuelle Ergebnisse und Tabellen: <a href="https://www.fussball.de" target="_blank" rel="noopener" class="text-club-green font-medium hover:underline">fussball.de</a>. Eltern finden Infos zu Trainingszeiten und Ansprechpartnern über die Jugendleitung.</p>
+            <a href="mitglied-werden.html" class="inline-flex mt-6 px-6 py-3 bg-club-green text-white font-semibold rounded-full hover:bg-club-green-light transition">Kind anmelden</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-club-ink text-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/50">
+      <p>© FSV Babelsberg 74 e.V. · Redesign-Konzept</p>
+      <a href="index.html" class="hover:text-white">← Zur Startseite</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* FSV Babelsberg 74 – Design system extras */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Subtle header shrink on scroll */
+#site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1A7A52;
+  outline-offset: 3px;
+}
+
+/* Line clamp utility if not in Tailwind CDN */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Form styles */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(15, 20, 16, 0.15);
+  border-radius: 0.5rem;
+  background: white;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-input:focus {
+  outline: none;
+  border-color: #0B5C3B;
+  box-shadow: 0 0 0 3px rgba(11, 92, 59, 0.15);
+}
+
+/* Page hero shared */
+.page-hero {
+  background: linear-gradient(135deg, #0B5C3B 0%, #083D28 100%);
+}
+
+/* Selection */
+::selection {
+  background: #0B5C3B;
+  color: white;
+}

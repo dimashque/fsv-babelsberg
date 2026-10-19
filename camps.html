@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feriencamps – FSV Babelsberg 74</title>
+  <meta name="description" content="74er Feriencamps – Fußballcamps für Kinder von 7 bis 13 Jahren in Potsdam-Babelsberg." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { club: { green: '#0B5C3B', 'green-dark': '#083D28', 'green-light': '#1A7A52', cream: '#F7F5F0', ink: '#0F1410', muted: '#5A635C' } },
+          fontFamily: { display: ['"Bebas Neue"', 'sans-serif'], sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-club-cream text-club-ink font-sans antialiased">
+  <header id="site-header" class="sticky top-0 z-50 bg-club-green text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-3"><div class="w-12 h-12 rounded-full bg-white flex items-center justify-center"><span class="font-display text-club-green text-xl">74</span></div><div class="hidden sm:block font-display text-2xl">FSV BABELSBERG</div></a>
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+        <a href="index.html" class="px-3 py-2 rounded hover:bg-white/10">Start</a>
+        <a href="camps.html" class="px-3 py-2 rounded bg-white/15">Feriencamps</a>
+        <a href="mitglied-werden.html" class="ml-2 px-4 py-2 bg-white text-club-green font-semibold rounded-full">Komm ins Team</a>
+      </nav>
+      <button id="menu-btn" class="lg:hidden p-2" aria-label="Menü"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-club-green-dark"><div class="px-4 py-4 space-y-1 text-sm"><a href="index.html" class="block px-3 py-2.5">Start</a><a href="camps.html" class="block px-3 py-2.5 bg-white/10 rounded">Feriencamps</a></div></div>
+  </header>
+
+  <main>
+    <section class="page-hero text-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-green-200 text-sm font-semibold tracking-widest uppercase mb-2">Ferien</p>
+        <h1 class="font-display text-5xl md:text-7xl leading-none">74ER FERIENCAMP</h1>
+        <p class="mt-4 text-white/80 max-w-xl">Fußballtage für Mädchen und Jungen von 7 bis 13 Jahren – ohne Übernachtung.</p>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20">
+      <div class="max-w-3xl mx-auto px-4">
+        <p class="text-lg text-club-muted leading-relaxed mb-8">
+          Anmelden können sich alle fußballbegeisterten Kinder, die sich in den Schulferien sportlich betätigen möchten. Die vier- bzw. fünftägigen Camps (ohne Übernachtung) bieten optimale Fußballtage. Täglich erleben die 7- bis 13-jährigen Mädchen und Jungen von 9:00–16:00 Uhr Trainingseinheiten und gemeinsame Aktivitäten (u. a. Kino, Schwimmbad).
+        </p>
+        <h2 class="font-semibold text-xl mb-4">Im Beitrag enthalten</h2>
+        <ul class="space-y-2 text-club-muted mb-10">
+          <li class="flex gap-2"><span class="text-club-green">✓</span> Zwei bis drei tägliche Trainingseinheiten auf Kunstrasen</li>
+          <li class="flex gap-2"><span class="text-club-green">✓</span> Leitung durch erfahrene Trainer:innen</li>
+          <li class="flex gap-2"><span class="text-club-green">✓</span> Verpflegung (Mittag, Getränke)</li>
+          <li class="flex gap-2"><span class="text-club-green">✓</span> 74er-Trikot und Teilnehmerurkunde</li>
+          <li class="flex gap-2"><span class="text-club-green">✓</span> Ein Ausflug</li>
+        </ul>
+        <p class="text-sm text-club-muted mb-6">Mindestteilnehmerzahl und aktuelle Preise/Termine: siehe offizielle Anmeldungsseite des Vereins. Preise unterscheiden sich für Mitglieder und Nichtmitglieder.</p>
+        <p class="text-sm font-medium mb-2">Ansprechpartner</p>
+        <p class="text-club-muted mb-8">Swen Büttner · <a href="mailto:buero@fsv-babelsberg74.de" class="text-club-green hover:underline">buero@fsv-babelsberg74.de</a></p>
+        <a href="https://www.fsv-babelsberg74.de/anmeldung-74er-feriencamp/" target="_blank" rel="noopener" class="inline-flex px-8 py-3.5 bg-club-green text-white font-semibold rounded-full hover:bg-club-green-light transition">Zur offiziellen Anmeldung</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-club-ink text-white pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/50">
+      <p>© FSV Babelsberg 74 e.V. · Redesign-Konzept</p>
+      <a href="index.html" class="hover:text-white">← Zur Startseite</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
